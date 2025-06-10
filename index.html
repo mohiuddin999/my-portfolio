@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color"contact ="#06c1db">
+    <title>Mohi Uddin Mohi - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#00e1ff', secondary: '#8b5cf6' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } };</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed w-full py-4 px-6  flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center mr-5 header-logo ">
+                <span class="text-black font-bold text-xl"><img src="images/logo.png" alt="logo"></span>
+            </div>
+            <h1 class="text-xl font-bold">Mohi <span class="text-primary">Mohi</span> Mohi</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8 navbar-menu">
+            <a href="#home" style="--i:1" class="hover:text-primary transition-colors" >Home</a>
+            <a href="#about"style="--i:2" class="hover:text-primary transition-colors">About</a>
+            <a href="#skills" style="--i:3"class="hover:text-primary transition-colors">Skills</a>
+            <a href="#services"style="--i:4" class="hover:text-primary transition-colors">Services</a>
+            <a href="#portfolio"style="--i:5" class="hover:text-primary transition-colors">Portfolio</a>
+            <a href="#contact"style="--i:6" class="hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <i class="ri-menu-line ri-2x"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#0a1929]/90 z-50 flex flex-col items-center justify-center space-y-8 text-2xl font-bold text-white transition-transform duration-300 translate-x-full md:hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-3xl text-primary">
+            <i class="ri-close-line"></i>
+        </button>
+        <a href="#home"  style="--i:1" class="hover:text-primary transition-colors" >Home</a>
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+        <a href="#services" class="hover:text-primary transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center py-20 px-6 md:px-16">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="home-container   w-full  md:w-1/2 mb-12 md:mb-0">
+                <h2 class="text-2xl mb-4">Hello, It's Me</h2>
+                <h1 class="main-title text-5xl md:text-6xl font-bold mb-6 ">Mohi Uddin Mohi</h1>
+                <h3 class="text-2xl mb-4">I'm a <span class="text"></span></h3>
+                <p class="text-gray-300 mb-8 max-w-lg">
+                    Passionate about creating elegant, efficient, and user-friendly web applications.
+                    With expertise in both frontend and backend technologies, I deliver complete solutions
+                    that help businesses achieve their digital goals.
+                </p>
+                <div class="flex space-x-4 mb-8 home-scl">
+                    <a href="#"style="--i:7"
+                        class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                        <i class="ri-facebook-fill "></i>
+                    </a>
+                    <a href="#"style="--i:8"
+                        class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                        <i class="ri-instagram-line "></i>
+                    </a>
+                    <a href="#"style="--i:9"
+                        class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                        <i class="ri-whatsapp-line "></i>
+                    </a>
+                    <a href="#"style="--i:10"
+                        class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                        <i class="ri-linkedin-fill "></i>
+                    </a>
+                </div>
+                <div class="flex space-x-4 ">
+                    <a href="#" class="btn-box">Hire Me</a>
+                    <a href="#" class="btn-box">Download CV</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div
+                    class="hero-image w-70 h-70  md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary glow">
+                    <img src="images/profile.png" alt="Alex Chen" class="w-full h-full object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">About <span class="text-primary">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/3 mb-12 md:mb-0 flex justify-center z-50">
+                    <div class="about-image w-64 h-64 rounded-full overflow-hidden ">
+                        <img src="images/profile.png" alt="Mohi Uddin Mohi" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 md:pl-16">
+                    <h3 class="text-2xl font-bold mb-4">Full Stack Developer</h3>
+                    <p class="text-gray-300 mb-6">
+                        With over 2 years of experience in web development, I specialize in creating responsive,
+                        user-friendly applications that solve real-world problems. My approach combines technical
+                        expertise with creative problem-solving to deliver solutions that exceed client expectations.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        I'm passionate about staying current with emerging technologies and best practices in the
+                        rapidly evolving tech landscape. This commitment to continuous learning allows me to implement
+                        innovative solutions that are both cutting-edge and reliable.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <p class="mb-2"><span class="font-bold">Name:</span> Mohi Uddin Mohi</p>
+                            <p class="mb-2"><span class="font-bold">Phone:</span>+8801644123871</p>
+                            <p class="mb-2"><span class="font-bold">Experience:</span> 2+ Years</p>
+                        </div>
+                        <div>
+                            <p class="mb-2"><span class="font-bold">Email:</span> mohiuddindev00@gmail.com</p>
+                            <p class="mb-2"><span class="font-bold">Location:</span> Dhaka,bangladesh</p>
+                            <p class="mb-2"><span class="font-bold">Freelance:</span> Available</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-box">
+                        More About Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-16 bg-[#081624]">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">My <span class="text-primary">Skills</span></h2>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold mb-8 text-center md:text-left">Technical Skills</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">HTML </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per html">
+                                    <span class="skill-percent">90%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">CSS </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per css">
+                                    <span class="skill-percent">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">JavaScript </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per javascript">
+                                    <span class="skill-percent">70%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">React </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per react ">
+                                    <span class="skill-percent">60%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">Node.js </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per node-js">
+                                    <span class="skill-percent">50%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">MongoDB</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per mongodb">
+                                    <span class="skill-percent">55%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">WordPress </span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per wordpress">
+                                    <span class="skill-percent">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pog">
+                            <div class="skill-box">
+                                <span class="title">Wix</span>
+                            </div>
+                            <div class="skill-bar">
+                                <span class="skill-per wix">
+                                    <span class="skill-percent">80%</span>
+                                </span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:pl-8 Professional-Skills ">
+                    <h3 class="text-2xl font-bold mb-8 text-center md:text-left">Professional Skills</h3>
+
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="flex flex-col items-center">
+                            <div class="circle-progress mb-4" data-percent="90">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-bar" cx="60" cy="60" r="54" stroke="url(#gradient1)"></circle>
+                                </svg>
+                                <div class="circle-text">0%</div>
+                            </div>
+                            <span class="text-lg font-medium">Creativity</span>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="circle-progress mb-4" data-percent="75">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-bar" cx="60" cy="60" r="54" stroke="url(#gradient1)"></circle>
+                                </svg>
+                                <div class="circle-text">0%</div>
+                            </div>
+                            <span class="text-lg font-medium">Problem Solving</span>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="circle-progress mb-4" data-percent="65">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-bar" cx="60" cy="60" r="54" stroke="url(#gradient1)"></circle>
+                                </svg>
+                                <div class="circle-text">0%</div>
+                            </div>
+                            <span class="text-lg font-medium">Communication</span>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="circle-progress mb-4" data-percent="85">
+                                <svg width="120" height="120" viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-bar" cx="60" cy="60" r="54" stroke="url(#gradient1)"></circle>
+                                </svg>
+                                <div class="circle-text">0%</div>
+                            </div>
+                            <span class="text-lg font-medium">Teamwork</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <svg width="0" height="0">
+            <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00e1ff" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 md:px-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">My <span class="text-primary">Services</span></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-palette-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-300 mb-6">
+                        Creating intuitive, visually appealing interfaces that enhance user experience and engagement.
+                        My designs focus on usability, accessibility, and conversion optimization.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-code-s-slash-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-300 mb-6">
+                        Building responsive, high-performance websites and web applications using modern technologies
+                        and best practices. From simple landing pages to complex web applications.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-smartphone-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Mobile App Development</h3>
+                    <p class="text-gray-300 mb-6">
+                        Developing cross-platform mobile applications that provide seamless user experiences across
+                        devices. Using React Native for efficient, native-like performance.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-server-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+                    <p class="text-gray-300 mb-6">
+                        Creating robust, scalable server-side applications and APIs that power your digital products.
+                        Expertise in Node.js, Express, MongoDB, and SQL databases.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-shopping-cart-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">E-commerce Solutions</h3>
+                    <p class="text-gray-300 mb-6">
+                        Building custom e-commerce platforms or integrating existing solutions like Shopify or
+                        WooCommerce.
+                        Complete with payment processing, inventory management, and more.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="service-card p-8 rounded-lg">
+                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-search-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">SEO Optimization</h3>
+                    <p class="text-gray-300 mb-6">
+                        Improving your website's visibility in search engines through technical optimization, content
+                        strategy, and performance enhancements to drive organic traffic.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-6 py-2 bg-primary/20 text-primary rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 md:px-16 bg-[#081624]">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">My <span class="text-primary">Portfolio</span></h2>
+
+            <!-- <div class="flex justify-center mb-12">
+                <div class="inline-flex bg-[#0a1929] p-1 rounded-full">
+                    <button class="px-6 py-2 rounded-full bg-primary text-black whitespace-nowrap">All</button>
+                    <button class="px-6 py-2 rounded-full text-white hover:bg-primary/20 whitespace-nowrap">Web
+                        Design</button>
+                    <button class="px-6 py-2 rounded-full text-white hover:bg-primary/20 whitespace-nowrap">Mobile
+                        Apps</button>
+                    <button
+                        class="px-6 py-2 rounded-full text-white hover:bg-primary/20 whitespace-nowrap">UI/UX</button>
+                </div>
+            </div> -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20with%20clean%20design%2C%20product%20display%2C%20shopping%20cart%20functionality%2C%20high-quality%20professional%20website%20screenshot&width=600&height=400&seq=1&orientation=landscape"
+                            alt="E-commerce Project"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">E-commerce Website</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-300">A full-featured online store with product catalog, cart functionality,
+                            and secure checkout.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20mobile%20app%20interface%20for%20fitness%20tracking%2C%20clean%20UI%20design%20with%20statistics%2C%20workout%20plans%2C%20and%20progress%20tracking%2C%20high-quality%20professional%20app%20screenshot&width=600&height=400&seq=2&orientation=landscape"
+                            alt="Fitness App"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">Fitness Tracking App</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fitness Tracking App</h3>
+                        <p class="text-gray-300">A mobile application for tracking workouts, nutrition, and fitness
+                            progress.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="uiux">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20dashboard%20interface%20with%20data%20visualization%2C%20analytics%20charts%2C%20user%20statistics%2C%20dark%20theme%20UI%20design%2C%20high-quality%20professional%20dashboard%20screenshot&width=600&height=400&seq=3&orientation=landscape"
+                            alt="Analytics Dashboard"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">Analytics Dashboard</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-300">A comprehensive data visualization platform for business intelligence
+                            and analytics.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20restaurant%20website%20design%20with%20food%20menu%2C%20reservation%20system%2C%20elegant%20layout%2C%20high-quality%20professional%20website%20screenshot&width=600&height=400&seq=4&orientation=landscape"
+                            alt="Restaurant Website"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">Restaurant Website</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Restaurant Website</h3>
+                        <p class="text-gray-300">A responsive website for a restaurant featuring menu, online ordering,
+                            and reservations.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20travel%20booking%20app%20interface%20with%20destination%20search%2C%20hotel%20listings%2C%20flight%20booking%20options%2C%20clean%20UI%20design%2C%20high-quality%20professional%20app%20screenshot&width=600&height=400&seq=5&orientation=landscape"
+                            alt="Travel App"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">Travel Booking App</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Travel Booking App</h3>
+                        <p class="text-gray-300">A mobile application for booking flights, hotels, and planning travel
+                            itineraries.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a1929] rounded-lg overflow-hidden group portfolio-item" data-category="uiux">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20social%20media%20platform%20interface%20with%20user%20profiles%2C%20posts%2C%20messaging%20features%2C%20clean%20UI%20design%2C%20high-quality%20professional%20website%20screenshot&width=600&height=400&seq=6&orientation=landscape"
+                            alt="Social Network"
+                            class="w-full h-64 object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-xl font-bold text-black mb-2">Social Network Platform</h3>
+                                <div class="flex justify-center space-x-3">
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-eye-line text-black"></i>
+                                    </a>
+                                    <a href="#"
+                                        class="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/40 transition-colors">
+                                        <i class="ri-link text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Social Network Platform</h3>
+                        <p class="text-gray-300">A community platform with profiles, posts, messaging, and content
+                            sharing features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 md:px-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16">Contact <span class="text-primary">Me</span></h2>
+
+            <div class="flex flex-col md:flex-row contact-text">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-bold mb-6">Let's Work Together</h3>
+                    <p class="text-gray-300 mb-8">
+                        I'm currently available for freelance work and full-time positions. If you have a project
+                        that needs expertise in web development or if you're looking to add a dedicated developer
+                        to your team, I'd love to hear from you!
+                    </p>
+
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="ri-mail-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm text-gray-400">Email</h4>
+                            <p> mohiuddindev00@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="ri-phone-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm text-gray-400">Phone</h4>
+                            <p>+8801644123871</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center mb-8">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                            <i class="ri-map-pin-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm text-gray-400">Location</h4>
+                            <p>Dhaka,Bangladesh</p>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4 home-scl">
+                        <a href="#" style="--i:12"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-facebook-fill "></i>
+                        </a>
+                        <a href="#"style="--i:13"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-linkedin-fill "></i>
+                        </a>
+                        <a href="#"style="--i:14"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-github-fill "></i>
+                        </a>
+                        <a href="#"style="--i:15"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-instagram-line "></i>
+                        </a>
+                        <a href="#"style="--i:16"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-telegram-line "></i>
+                        </a>
+                        <a href="#"style="--i:17"
+                            class="w-10 h-10 rounded-full bg-[#0a1929] border border-primary flex items-center justify-center social-icon">
+                            <i class="ri-whatsapp-line "></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 md:pl-12 form">
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Enter Your Name"
+                                class="w-full p-4 rounded-lg bg-[#0a1929]/50 border border-[#1e3a5f] focus:border-primary">
+                        </div>
+
+                        <div>
+                            <input type="email" placeholder="Enter Your Email"
+                                class="w-full p-4 rounded-lg bg-[#0a1929]/50 border border-[#1e3a5f] focus:border-primary">
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Enter Your Subject"
+                                class="w-full p-4 rounded-lg bg-[#0a1929]/50 border border-[#1e3a5f] focus:border-primary">
+                        </div>
+
+                        <div>
+                            <textarea rows="6" placeholder="Enter Your Message"
+                                class="w-full p-4 rounded-lg bg-[#0a1929]/50 border border-[#1e3a5f] focus:border-primary resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-box">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 md:px-16 bg-[#081624] border-t border-[#1e3a5f]">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2025 Mohi Uddin Mohi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scroll-top w-12 h-12 rounded-full bg-primary flex items-center justify-center glow">
+        <i class="ri-arrow-up-line text-black"></i>
+    </a>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>
